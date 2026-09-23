@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IEEE CS MBITS — Engineering Tomorrow</title>
+<meta name="description" content="IEEE Computer Society MBITS — a community of builders, innovators and future technologists. Explore events, projects, achievements and the team.">
+<meta property="og:title" content="IEEE CS MBITS — Engineering Tomorrow">
+<meta property="og:description" content="A community of builders, innovators and future technologists turning ideas into impact.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#04060f;--tx:#e8edff;--mut:#8f9abf;--c1:#22d3ee;--c2:#6366f1;--c3:#a855f7;--ln:rgba(120,140,255,.16);--gl:rgba(255,255,255,.045);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:.55;background:linear-gradient(var(--ln) 1px,transparent 1px) 0 0/52px 52px,linear-gradient(90deg,var(--ln) 1px,transparent 1px) 0 0/52px 52px;-webkit-mask-image:radial-gradient(ellipse at 50% 25%,#000 10%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 25%,#000 10%,transparent 72%)}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px}
+h1,h2,h3{line-height:1.05;letter-spacing:-.02em}
+section{padding:110px 6vw;max-width:1240px;margin:auto}
+.k{font:600 .78rem ui-monospace,Menlo,monospace;color:var(--c1);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:block}
+h2{font-size:clamp(2rem,5.5vw,3.6rem);margin-bottom:16px}
+.lead{color:var(--mut);max-width:60ch;margin-bottom:40px}
+.g{background:linear-gradient(90deg,var(--c1),var(--c2) 55%,var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:.85rem 1.5rem;border-radius:99px;border:1px solid var(--ln);background:var(--gl);color:var(--tx);font:600 .95rem inherit;text-decoration:none;cursor:pointer;transition:background .3s,box-shadow .3s}
+.btn:hover{box-shadow:0 0 28px rgba(34,211,238,.25)}
+.btn.p{background:linear-gradient(90deg,var(--c1),var(--c2));border:0;color:#020617}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.card{background:var(--gl);border:1px solid var(--ln);border-radius:18px;backdrop-filter:blur(10px);transition:border-color .3s,box-shadow .3s,transform .25s}
+.card:hover{border-color:rgba(34,211,238,.5);box-shadow:0 0 40px rgba(99,102,241,.2)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(14px + env(safe-area-inset-top,0px)) 5vw 14px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.sc{background:rgba(4,6,15,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--ln);padding-top:calc(8px + env(safe-area-inset-top,0px));padding-bottom:8px}
+.logo{font-weight:800;line-height:1.1;font-size:.82rem;letter-spacing:.06em;color:var(--tx);text-decoration:none}.logo small{display:block;color:var(--c1);font-size:.72rem;letter-spacing:.3em}
+.links{display:none;gap:18px;list-style:none;padding:0}.links a{color:var(--mut);text-decoration:none;font-size:.86rem;padding:6px 0;border-bottom:2px solid transparent;transition:.3s}.links a:hover,.links a.act{color:var(--tx);border-color:var(--c1)}
+.burger{background:none;border:1px solid var(--ln);color:var(--tx);border-radius:10px;width:44px;height:44px;font-size:1.3rem;cursor:pointer}
+.menu{position:fixed;inset:0;z-index:40;background:rgba(4,6,15,.96);display:none;flex-direction:column;justify-content:center;align-items:center;gap:22px}.menu.open{display:flex}.menu a{color:var(--tx);font-size:1.7rem;font-weight:700;text-decoration:none}
+.ncta{display:none;padding:.55rem 1.1rem;font-size:.85rem}
+@media(min-width:1100px){.links{display:flex}.ncta{display:inline-flex}.burger{display:none}}
+/* hero */
+#home{min-height:100svh;display:grid;gap:24px;align-items:center;padding-top:120px;position:relative}
+.ln{display:block;overflow:hidden;padding-bottom:.05em}.ln span{display:inline-block;transform:translateY(110%);animation:up 1s .15s cubic-bezier(.2,.8,.2,1) forwards}.ln+.ln span{animation-delay:.35s}
+@keyframes up{to{transform:none}}
+h1{font-size:clamp(2.3rem,10.5vw,4.6rem);font-weight:900;letter-spacing:-.035em;margin-bottom:22px}
+#home p.lead{font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.vis{position:relative;aspect-ratio:1;width:100%;max-width:560px;margin:auto}.vis::before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.35),transparent 68%);filter:blur(30px)}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.stats div{padding:18px;text-align:left}.stats b{display:block;font-size:2.1rem;font-weight:800;line-height:1}.stats span{color:var(--mut);font-size:.85rem}
+.scr{grid-column:1/-1;font:600 .72rem ui-monospace,monospace;letter-spacing:.2em;color:var(--mut);text-align:center;animation:fl 2s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(6px)}}
+@media(min-width:1100px){#home{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}h1{font-size:min(4.6rem,5.2vw)}.stats{grid-template-columns:repeat(4,1fr)}}
+/* network */
+.flow{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.node{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:16px;border:1px solid var(--ln);background:var(--gl);color:var(--tx);font:600 1rem inherit;cursor:pointer;transition:.3s;text-align:left}
+.node span{font-size:1.4rem}.node:hover,.node.act{border-color:var(--c1);box-shadow:0 0 30px rgba(34,211,238,.22);background:rgba(34,211,238,.08)}
+.ar{display:block;width:2px;height:22px;margin:0 auto;background:linear-gradient(var(--c1),var(--c2));position:relative;overflow:hidden}.ar::after{content:"";position:absolute;left:0;top:-8px;width:2px;height:8px;background:#fff;animation:fw 1.6s linear infinite}
+@keyframes fw{to{top:24px}}
+.info{margin-top:22px;padding:22px;min-height:96px;color:var(--mut)}.info b{color:var(--tx);display:block;font-size:1.1rem;margin-bottom:4px}
+@media(min-width:900px){.flow{flex-direction:row;align-items:center}.node{flex:1;flex-direction:column;text-align:center;padding:22px 8px}.ar{width:24px;height:2px;flex:none;background:linear-gradient(90deg,var(--c1),var(--c2))}.ar::after{width:8px;height:2px;left:-8px;top:0;animation:fh 1.6s linear infinite}}
+@keyframes fh{to{left:26px}}
+/* orbit */
+.wb{display:grid;gap:28px;align-items:center}
+.orbit{position:relative;width:100%;max-width:520px;aspect-ratio:1;margin:auto}.orbit::before{content:"";position:absolute;inset:10%;border:1px dashed var(--ln);border-radius:50%;animation:rot 60s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:28%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:800;font-size:clamp(.6rem,2.4vw,.95rem);background:radial-gradient(circle,rgba(99,102,241,.5),rgba(34,211,238,.1));border:1px solid var(--c1);box-shadow:0 0 50px rgba(34,211,238,.35);animation:pl 3s ease-in-out infinite}
+@keyframes pl{50%{box-shadow:0 0 80px rgba(168,85,247,.5)}}
+.ob{position:absolute;transform:translate(-50%,-50%);width:clamp(52px,15vw,84px);aspect-ratio:1;border-radius:50%;border:1px solid var(--ln);background:#0a1024;color:var(--tx);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.3s}
+.ob span{font-size:1.3rem}.ob small{font-size:clamp(.5rem,1.9vw,.66rem);line-height:1.1;color:var(--mut);text-align:center}.ob:hover,.ob.act{border-color:var(--c1);box-shadow:0 0 28px rgba(34,211,238,.4);scale:1.12}
+.tp{padding:26px}.tp h3{font-size:1.5rem;margin:6px 0 10px}.tp p{color:var(--mut);margin-bottom:10px}.tp em{font-style:normal;color:var(--c1)}
+@media(min-width:900px){.wb{grid-template-columns:1fr 1fr}}
+/* events */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.chip{padding:.5rem 1.1rem;border-radius:99px;border:1px solid var(--ln);background:none;color:var(--mut);font:600 .8rem ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.3s}.chip.act,.chip:hover{color:#020617;background:var(--c1);border-color:var(--c1)}
+.tl{list-style:none;padding:0 0 0 26px;position:relative}.tl::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:linear-gradient(var(--c1),var(--c3),transparent)}
+.ev{position:relative;padding:0 0 32px;display:flex;gap:18px}.ev::before{content:"";position:absolute;left:-26px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--c1);box-shadow:0 0 12px var(--c1)}
+.num{font:800 2.4rem/1 ui-monospace,monospace;color:rgba(255,255,255,.12)}.ev h3{font-size:1.4rem;margin:8px 0 4px}.ev p{color:var(--mut);max-width:56ch}.ev small{color:var(--c1);margin-right:12px;font-family:ui-monospace,monospace}
+.pill{display:inline-block;font:600 .7rem ui-monospace,monospace;padding:2px 10px;border-radius:99px;border:1px solid var(--ln);color:var(--mut)}.pill.st{color:var(--c3);border-color:var(--c3)}
+.lnk{background:none;border:0;color:var(--c1);font:600 .9rem inherit;cursor:pointer;padding:6px 0}.dt{margin-top:8px;padding:12px 16px;border-left:2px solid var(--c3)}
+/* projects */
+.pj{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.pc{padding:26px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;min-height:250px}.pc::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 100% 0,rgba(99,102,241,.3),transparent 60%);opacity:.5;transition:.5s}.pc:hover::before{opacity:1;transform:scale(1.4)}.pc:hover{transform:translateY(-6px) scale(1.02)}
+.pc>*{position:relative}.pc b{font:800 1.8rem ui-monospace,monospace;color:rgba(255,255,255,.14)}.pc h3{font-size:1.3rem}.pc p{color:var(--mut);font-size:.92rem}
+.tg{display:flex;flex-wrap:wrap;gap:6px;transition:.4s}.tg i{font-style:normal;font-size:.72rem;padding:2px 10px;border-radius:99px;background:rgba(34,211,238,.1);color:var(--c1)}
+@media(hover:hover){.tg{opacity:0;transform:translateY(8px)}.pc:hover .tg{opacity:1;transform:none}}
+.pc .btn{margin-top:auto;align-self:flex-start;padding:.5rem 1rem;font-size:.85rem}.pc .btn span{transition:transform .3s}.pc:hover .btn span{transform:translateX(5px)}
+.pipe{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 4px;margin-top:44px;font:700 clamp(.75rem,2.6vw,1rem) ui-monospace,monospace;letter-spacing:.06em}.pipe span{padding:8px 14px;border-radius:99px;border:1px solid var(--ln)}.pipe span:nth-child(odd){color:var(--c1)}.pipe i{color:var(--mut);font-style:normal;align-self:center}
+/* achievements */
+.ds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:14px;margin-bottom:46px}.ds div{padding:22px}.ds b{display:block;font-size:2.6rem;line-height:1;font-weight:800}.ds span{color:var(--mut);font-size:.88rem}.ds small{display:block;color:var(--c3);font:.68rem ui-monospace,monospace;margin-top:6px}
+.ph{color:var(--c3);font-family:ui-monospace,monospace;font-size:.85rem}
+/* team */
+.tm{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.tc{overflow:hidden;position:relative}.av{aspect-ratio:1;display:grid;place-items:center;font-size:3.2rem;font-weight:800;background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(168,85,247,.25));transition:transform .6s}.tc:hover .av{transform:scale(1.08)}
+.tb{padding:16px 18px;position:relative;background:#070b1a}.tb h3{font-size:1.05rem}.tb span{color:var(--c1);font-size:.85rem}.tb p{color:var(--mut);font-size:.85rem;max-height:0;overflow:hidden;transition:max-height .4s}.tc:hover p,.tc:focus-within p{max-height:120px}.soc{display:flex;gap:10px;margin-top:8px}.soc a{color:var(--mut);font-size:.8rem;text-decoration:none;border:1px solid var(--ln);padding:2px 10px;border-radius:99px}.soc a:hover{color:var(--c1)}
+@media(hover:none){.tb p{max-height:120px}}
+/* gallery */
+.gl{columns:1;column-gap:14px}.gi{break-inside:avoid;margin-bottom:14px;border-radius:16px;border:1px solid var(--ln);display:block;width:100%;cursor:zoom-in;color:var(--tx);position:relative;overflow:hidden;padding:0;font:inherit;text-align:left}.gi>*{transition:transform .6s}.gi:hover>*{transform:scale(1.07)}.gi img,.gi .pf{width:100%;display:block}.gi cite{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font:.78rem ui-monospace,monospace;font-style:normal;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.pf{display:grid;place-items:center;color:rgba(255,255,255,.5);font:.8rem ui-monospace,monospace}
+@media(min-width:600px){.gl{columns:2}}@media(min-width:960px){.gl{columns:3}}
+#lb{position:fixed;inset:0;z-index:80;background:rgba(2,4,12,.92);display:none;place-items:center;padding:5vw}#lb.open{display:grid}#lb .bx{width:min(92vw,820px);border-radius:18px;overflow:hidden;border:1px solid var(--c1);box-shadow:0 0 60px rgba(34,211,238,.25)}#lb .pf,#lb img{width:100%;height:min(60vh,520px);object-fit:cover}#lb p{padding:12px 16px;background:#070b1a;color:var(--mut)}#lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px}
+/* why */
+.wy{display:grid;gap:14px;position:relative}.wy .card{padding:28px}.wy h3{font-size:1.8rem;margin-bottom:6px}.wy p{color:var(--mut)}.hub{display:none}
+@media(min-width:800px){.wy{grid-template-columns:1fr 1fr;gap:70px 90px}.hub{display:grid;place-items:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;border-radius:50%;border:1px solid var(--c1);background:#050915;font-weight:800;text-align:center;box-shadow:0 0 50px rgba(34,211,238,.3);z-index:2}}
+/* terminal */
+.term{background:#02040b;border:1px solid var(--ln);border-radius:16px;overflow:hidden;box-shadow:0 0 60px rgba(99,102,241,.18)}.tbar{display:flex;gap:7px;padding:12px 16px;border-bottom:1px solid var(--ln)}.tbar i{width:11px;height:11px;border-radius:50%;background:#334}
+#tout{padding:22px;font:.95rem/1.8 ui-monospace,Menlo,monospace;color:#8be9fd;min-height:190px;white-space:pre-wrap}.cmds{display:flex;flex-wrap:wrap;gap:10px;padding:0 22px 22px}.cmds button{font:600 .95rem ui-monospace,monospace;padding:.55rem 1rem;border-radius:8px;border:1px solid var(--c1);background:none;color:var(--c1);cursor:pointer}.cmds button:hover{background:rgba(34,211,238,.14)}.cmds button:disabled{opacity:.35;cursor:wait}
+.cur::after{content:"█";animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+/* join */
+#join{max-width:none;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,rgba(99,102,241,.45),transparent 60%)}#join::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(34,211,238,.09),transparent 30%,rgba(168,85,247,.09),transparent 60%);animation:rot 30s linear infinite}#join>*{position:relative}#join h2{font-size:clamp(2.2rem,8vw,5rem);max-width:14ch;margin:0 auto 16px}#join .cta{justify-content:center}#join .lead{margin:0 auto 32px}
+/* contact */
+.ct{display:grid;gap:28px}.ct address{font-style:normal;color:var(--mut)}.ct address b{color:var(--tx);display:block;font-size:1.3rem;margin-bottom:12px}.ct address a{color:var(--c3);font-family:ui-monospace,monospace;text-decoration:none}
+form{padding:26px;display:grid;gap:14px}label{font-size:.85rem;color:var(--mut);display:grid;gap:6px}input,textarea{background:rgba(255,255,255,.05);border:1px solid var(--ln);border-radius:10px;padding:12px 14px;color:var(--tx);font:inherit;width:100%}input[aria-invalid=true],textarea[aria-invalid=true]{border-color:#f87171}.er{color:#fca5a5;font-style:normal;font-size:.78rem;min-height:1em}#ok{color:#6ee7b7;border:1px solid #34d399;border-radius:10px;padding:12px}
+@media(min-width:900px){.ct{grid-template-columns:1fr 1.2fr}}
+footer{border-top:1px solid var(--ln);padding:60px 6vw 40px;text-align:center;color:var(--mut);position:relative;overflow:hidden}footer::before{content:"";position:absolute;top:0;left:0;height:2px;width:30%;background:linear-gradient(90deg,transparent,var(--c1),transparent);animation:sl 5s linear infinite}@keyframes sl{from{left:-30%}to{left:100%}}footer b{display:block;color:var(--tx);font-size:1.2rem}footer nav{position:static;justify-content:center;flex-wrap:wrap;background:none;padding:18px 0;border:0}footer nav a{color:var(--mut);text-decoration:none;font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.ln span{transform:none}.rv{opacity:1;transform:none}}
+/* preloader */
+#pl{position:fixed;inset:0;z-index:200;background:#04060f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .6s,visibility .6s}
+#pl.hide{opacity:0;visibility:hidden;pointer-events:none}
+#pl b{font:800 1.6rem/1 ui-monospace,monospace;letter-spacing:.06em}#pl b span{color:var(--c1)}
+#plb{width:min(220px,50vw);height:2px;background:var(--ln);border-radius:2px;overflow:hidden}#plb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--c1),var(--c3))}
+#pl small{font:600 .72rem ui-monospace,monospace;color:var(--mut);letter-spacing:.14em}
+/* progress bar */
+#pg{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));z-index:60;transition:width .1s linear}
+/* custom cursor */
+.cd,.cr{position:fixed;top:0;left:0;pointer-events:none;z-index:90;border-radius:50%;transform:translate(-50%,-50%)}
+.cd{width:6px;height:6px;background:var(--c1)}
+.cr{width:34px;height:34px;border:1px solid rgba(34,211,238,.5);transition:width .25s,height .25s,border-color .25s,background .25s}
+.cr.hov{width:56px;height:56px;background:rgba(34,211,238,.08);border-color:var(--c1)}
+@media(hover:none),(pointer:coarse){.cd,.cr{display:none}}
+/* command palette */
+.pk{background:none;border:1px solid var(--ln);color:var(--mut);border-radius:10px;padding:.5rem .8rem;font:600 .78rem ui-monospace,monospace;cursor:pointer;display:none;align-items:center;gap:6px}
+@media(min-width:1100px){.pk{display:inline-flex}}
+#pkw{position:fixed;inset:0;z-index:95;background:rgba(2,4,12,.7);display:none;align-items:flex-start;justify-content:center;padding:14vh 5vw}
+#pkw.open{display:flex}
+#pkd{width:min(560px,100%);border-radius:16px;border:1px solid var(--c1);background:#070b1a;box-shadow:0 0 60px rgba(34,211,238,.25);overflow:hidden}
+#pkd input{width:100%;border:0;border-bottom:1px solid var(--ln);background:none;color:var(--tx);padding:16px 18px;font:1rem inherit}
+#pkr{max-height:50vh;overflow:auto;padding:8px}
+#pkr button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--tx);padding:10px 14px;border-radius:10px;font:inherit;cursor:pointer}
+#pkr button:hover,#pkr button.hi{background:rgba(34,211,238,.12);color:var(--c1)}
+</style></head><body>
+<div id="pl"><b>IEEE<span>CS</span> MBITS</b><div id="plb"><i></i></div><small>ENGINEERING TOMORROW</small></div>
+<div id="pg"></div><div class="cd"></div><div class="cr"></div>
+<div id="pkw" role="dialog" aria-modal="true" aria-label="Command palette"><div id="pkd"><input id="pki" placeholder="Jump to a section… (Esc to close)" aria-label="Search sections"><div id="pkr"></div></div></div>
+<nav id="nav" aria-label="Main"><a class="logo" href="#home">IEEE COMPUTER SOCIETY<small>MBITS</small></a>
+<ul class="links" id="links"></ul><button class="pk" id="pkbtn" aria-haspopup="dialog">⌘K Jump to…</button><a class="btn p ncta" href="#network">Explore IEEE CS</a>
+<button class="burger" id="bg" aria-label="Open menu" aria-expanded="false">☰</button></nav>
+<div class="menu" id="menu"></div>
+<main>
+<section id="home"><div><span class="k">Enter</span><h1><span class="ln"><span>ENGINEERING</span></span><span class="ln g"><span>TOMORROW.</span></span></h1>
+<p class="lead">IEEE Computer Society MBITS is a community of builders, innovators, problem solvers, and future technologists turning ideas into impact.</p>
+<div class="cta"><a class="btn p mag" href="#network">Explore Our World</a><a class="btn mag" href="#events">View Events</a></div></div>
+<div class="vis" role="img" aria-label="Rotating network sphere with nodes for AI, Web, Cyber, Cloud, Robotics, Data and Innovation"><canvas id="cv"></canvas></div>
+<div class="stats" id="stats"></div><div class="scr">SCROLL TO EXPLORE ↓</div></section>
+
+<section id="network"><span class="k">Discover · The Network</span><h2>Students to <span class="g">innovation.</span></h2>
+<p class="lead">IEEE Computer Society MBITS brings together students passionate about computing, technology and innovation. Explore how each step feeds the next.</p>
+<div class="flow rv" id="flow"></div><div class="info card" id="fd" aria-live="polite"></div></section>
+
+<section id="tech"><span class="k">Connect · What we build</span><h2>One core. <span class="g">Eight frontiers.</span></h2>
+<div class="wb"><div class="orbit rv" id="orbit"></div><div class="tp card" id="tp" aria-live="polite"></div></div></section>
+
+<section id="events"><span class="k">Build · Events</span><h2>The event <span class="g">timeline.</span></h2>
+<p class="lead">All entries are placeholders. Edit them in the DATA block at the top of the script.</p>
+<div class="chips" id="evf" role="group" aria-label="Filter events"></div><ol class="tl" id="evl"></ol></section>
+
+<section id="projects"><span class="k">Build · Innovation Lab</span><h2>Ideas that <span class="g">ship.</span></h2>
+<p class="lead">Sample project concepts. Replace with real MBITS student projects.</p>
+<div class="pj" id="pj"></div>
+<div class="pipe" aria-label="Idea, Build, Test, Deploy, Impact"><span>IDEA</span><i>→</i><span>BUILD</span><i>→</i><span>TEST</span><i>→</i><span>DEPLOY</span><i>→</i><span>IMPACT</span></div></section>
+
+<section id="achievements"><span class="k">Achieve · Dashboard</span><h2>Track <span class="g">impact.</span></h2>
+<p class="lead">Counters are placeholders at 00 until real numbers are added.</p>
+<div class="ds" id="ds"></div><ol class="tl" id="at"></ol></section>
+
+<section id="team"><span class="k">Achieve · Team</span><h2>The people <span class="g">behind it.</span></h2><div class="tm" id="tm"></div></section>
+
+<section id="gallery"><span class="k">Achieve · Gallery</span><h2>Moments, <span class="g">captured.</span></h2>
+<div class="chips" id="gf" role="group" aria-label="Filter gallery"></div><div class="gl" id="gl"></div></section>
+
+<section id="why"><span class="k">Create the future · Why IEEE CS?</span><h2>Four ways to <span class="g">grow.</span></h2>
+<div class="wy" id="wy"><div class="hub">IEEE<br>CS</div></div></section>
+
+<section id="terminal"><span class="k">Future terminal</span><h2>&gt; What will you <span class="g">build?</span></h2>
+<div class="term"><div class="tbar"><i></i><i></i><i></i></div><div id="tout" class="cur" aria-live="polite"></div><div class="cmds" id="cmds"></div></div></section>
+
+<section id="join"><span class="k">Join the community</span><h2>Your next idea <span class="g">starts here.</span></h2><p class="lead">Learn. Build. Connect. Create something that matters.</p>
+<div class="cta"><a class="btn p mag" href="#contact">Join IEEE CS</a><a class="btn mag" href="#events">Explore Events</a></div></section>
+
+<section id="contact"><span class="k">Contact</span><h2>Say <span class="g">hello.</span></h2>
+<div class="ct"><address><b>IEEE Computer Society MBITS</b>Email: <a href="mailto:ieeecs.mbits@gmail.com">ieeecs.mbits@gmail.com</a><br>Instagram: <a href="#contact">@ieeecs_mbits</a><br>LinkedIn: <a href="#contact">IEEE Computer Society MBITS</a><br>Location: MBITS, Kerala<p style="margin-top:14px;color:var(--c1);font:.72rem ui-monospace,monospace">Sample contact details — swap in the chapter's real handles before publishing.</p></address>
+<form id="cf" class="card" novalidate><label>Name<input name="name" autocomplete="name"><em class="er"></em></label><label>Email<input name="email" type="email" autocomplete="email"><em class="er"></em></label><label>Message<textarea name="message" rows="4"></textarea><em class="er"></em></label><button class="btn p" type="submit">Send Message</button><p id="ok" hidden role="status">Message sent (demo). Connect a backend to deliver it.</p></form></div></section>
+</main>
+<footer><b>IEEE Computer Society MBITS</b>Engineering Tomorrow.<nav id="fl" aria-label="Footer"></nav><p>Social: @ieeecs_mbits · IEEE Computer Society MBITS on LinkedIn</p><small>© <span id="yr"></span> IEEE Computer Society MBITS. Student-built demo for WebNova — content is sample, not official.</small></footer>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button class="btn" id="lx">Close ✕</button><div class="bx"><div id="lbi"></div><p id="lbc"></p></div></div>
+
+<script>
+/* ===== DATA: sample content for demo/judging. Swap in real details before publishing as the official site. ===== */
+const D={
+stats:[[50,'+','Members'],[20,'+','Events'],[10,'+','Projects'],['∞','','Ideas']],
+flow:[['Students','🎓','Curious minds in computing at MBITS.'],['Learning','📚','Sessions and workshops that build skills.'],['Projects','🛠️','Knowledge turned into working things.'],['Events','🎤','Talks, hackathons and meets that bring people together.'],['Community','🤝','A network to grow with.'],['Innovation','💡','New ideas that create impact.']],
+tech:[['AI & ML','🧠','Models, data and intelligent systems.','Study groups, workshops','Campus Mood Analyzer'],['Web Dev','🌐','Modern interfaces and full-stack apps.','Build sessions','Chapter Event Portal'],['Cybersecurity','🛡️','Protecting systems and people.','Security talks, CTF practice','Phishing Simulation Toolkit'],['Cloud','☁️','Scalable infrastructure and deployment.','Cloud workshops','Auto-Deploy Pipeline'],['Data Science','📊','Turning data into decisions.','Analysis challenges','Placement Trends Dashboard'],['IoT & Robotics','🤖','Connected devices and machines.','Hardware builds','Smart Attendance Bot'],['Software Eng.','⚙️','Clean, tested, maintainable code.','Code reviews, coding challenges','Peer Code Review Bot'],['Emerging Tech','🚀','What comes next in computing.','Tech talks','AR Campus Guide']],
+ev:[['Aug 2025','Tech Talks: LLMs in Practice','Talks','A speaker session on how large language models are changing everyday software development.'],['Sep 2025','Hackathon: Build36','Hackathons','A 36-hour build sprint where teams shipped working prototypes across five tracks.'],['Oct 2025','Git & GitHub Workshop','Workshops','A hands-on session covering branching, pull requests and real collaborative workflows.'],['Nov 2025','Code Sprint','Competitions','A timed coding challenge testing problem-solving speed and accuracy.'],['Dec 2025','Deep Dive: Systems Design','Talks','A technical session breaking down how large-scale systems are architected.'],['Jan 2026','Community Meetup','Community','An informal evening for members to network, share projects and plan the semester.']],
+pj:[['AI Interior Designer',['AI','Vision'],'Suggests furniture layouts and colour palettes from a photo of a room.'],['Smart Health Prediction',['ML','Data'],'Flags early risk indicators from routine health survey data.'],['Campus Innovation Hub',['Web','Cloud'],'A shared portal for students to post and discover campus project ideas.'],['Cybersecurity Toolkit',['Security','Python'],'A set of scripts for basic network scanning and password-strength auditing.'],['IoT Monitoring System',['IoT','Sensors'],'Tracks temperature and occupancy in a lab using low-cost sensors.']],
+ach:[['Hackathons',6],['Workshops',14],['Certifications',22],['Competitions',9],['Projects',11],['Community Impact',180]],
+tl:[['2026','Hosted a WebNova prep bootcamp for 40+ members'],['2025','Ran a 6-week Git & web development workshop series'],['2025','Team placed in the top 10 at a regional hackathon'],['2024','Chapter re-launched under new student leadership']],
+team:[['Aravind Menon','President','Leads chapter strategy and represents IEEE CS MBITS at section events.'],['Sreelakshmi Nair','Vice President','Coordinates events and supports leads across every vertical.'],['Rahul Krishnan','Secretary','Manages records, communication and chapter documentation.'],['Anagha Suresh','Technical Lead','Drives technical workshops and project mentorship.'],['Vishnu Prasad','Event Lead','Plans and runs hackathons, talks and meetups.'],['Fathima Rasheed','Design Lead','Owns the chapter’s visual identity and creative direction.'],['Team Member','Member','An active contributor across chapter activities and projects.']],
+gal:[['Events',220,200],['Workshops',300,260],['Community',180,300],['Projects',260,170],['Events',320,320],['Workshops',200,230],['Community',280,210],['Projects',230,280]], /* [category,height,hue]; add a 4th src:'url' item per row to swap in real photos */
+why:[['LEARN','Build knowledge through technical sessions and workshops.'],['BUILD','Turn knowledge into real projects.'],['CONNECT','Meet students, developers and technology enthusiasts.'],['LEAD','Develop leadership and teamwork skills.']],
+cmd:{'/learn':'Technical sessions and workshops. Start with one new skill.','/build':'Pick an idea. Ship a prototype. Show it to the community.','/innovate':'Combine AI, web, security and hardware in ways nobody asked for yet.','/connect':'Find collaborators, mentors and friends who build.','/lead':'Organise an event, guide a team, grow others.'}};
+/* ===== Helpers ===== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)],RM=matchMedia('(prefers-reduced-motion:reduce)').matches,H=(id,t)=>$('#'+id).innerHTML=t;
+const SECS=[['home','Home'],['network','About'],['events','Events'],['projects','Projects'],['achievements','Achievements'],['team','Team'],['gallery','Gallery'],['contact','Contact']];
+H('links',SECS.map(s=>`<li><a href="#${s[0]}">${s[1]}</a></li>`).join(''));
+H('menu',SECS.map(s=>`<a href="#${s[0]}">${s[1]}</a>`).join(''));H('fl',SECS.map(s=>`<a href="#${s[0]}">${s[1]}</a>`).join(''));
+$('#yr').textContent=new Date().getFullYear();
+const bg=$('#bg'),mn=$('#menu');bg.onclick=()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰';document.body.style.overflow=o?'hidden':''};
+mn.onclick=e=>{if(e.target.tagName=='A'){mn.classList.remove('open');bg.textContent='☰';document.body.style.overflow=''}};
+addEventListener('scroll',()=>{$('#nav').classList.toggle('sc',scrollY>40);const d=document.documentElement;$('#pg').style.width=(scrollY/(d.scrollHeight-innerHeight)*100)+'%'},{passive:true});
+/* preloader */
+(()=>{const bar=$('#plb i');let p=0;const t=setInterval(()=>{p+=Math.random()*18;bar.style.width=Math.min(p,100)+'%';if(p>=100){clearInterval(t);setTimeout(()=>$('#pl').classList.add('hide'),260)}},110)})();
+/* custom cursor */
+if(matchMedia('(pointer:fine)').matches){const cd=$('.cd'),cr=$('.cr');let cx=innerWidth/2,cy=innerHeight/2,rx=cx,ry=cy;
+addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;cd.style.left=cx+'px';cd.style.top=cy+'px';cr.classList.toggle('hov',!!e.target.closest('a,button,.node,.ob,.gi,input,textarea'))});
+(function lp(){rx+=(cx-rx)*.18;ry+=(cy-ry)*.18;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(lp)})()}
+/* command palette */
+const pkw=$('#pkw'),pki=$('#pki'),pkr=$('#pkr');let pkf,pksel=0;
+function pkList(q){const items=SECS.filter(s=>s[1].toLowerCase().includes(q.toLowerCase()));pkr.innerHTML=items.map((s,i)=>`<button data-h="${s[0]}" class="${i==0?'hi':''}">${s[1]}</button>`).join('')||'<p style="padding:10px 14px;color:var(--mut)">No matches</p>';pksel=0}
+function pkOpen(){pkf=document.activeElement;pkw.classList.add('open');pki.value='';pkList('');pki.focus()}
+function pkClose(){pkw.classList.remove('open');pkf&&pkf.focus()}
+$('#pkbtn').onclick=pkOpen;
+addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()=='k'){e.preventDefault();pkw.classList.contains('open')?pkClose():pkOpen()}else if(e.key=='Escape'&&pkw.classList.contains('open'))pkClose();
+else if(pkw.classList.contains('open')&&(e.key=='ArrowDown'||e.key=='ArrowUp')){e.preventDefault();const bs=$$('#pkr button');if(!bs.length)return;bs[pksel]?.classList.remove('hi');pksel=(pksel+(e.key=='ArrowDown'?1:-1)+bs.length)%bs.length;bs[pksel].classList.add('hi');bs[pksel].scrollIntoView({block:'nearest'})}
+else if(pkw.classList.contains('open')&&e.key=='Enter'){const b=$$('#pkr button')[pksel];if(b){location.hash=b.dataset.h;pkClose()}}});
+pki.oninput=()=>pkList(pki.value);pkw.onclick=e=>{if(e.target==pkw)pkClose()};
+pkr.onclick=e=>{const b=e.target.closest('button[data-h]');if(b){location.hash=b.dataset.h;pkClose()}};
+/* stats + achievements */
+const num=(v,s,l,x='')=>`<div class="card"><b class="g" data-n="${v}" data-s="${s}">00</b><span>${l}</span>${x}</div>`;
+H('stats',D.stats.map(s=>num(s[0],s[1],s[2])).join(''));
+H('ds',D.ach.map(a=>num(a[1],'+',a[0])).join(''));
+H('at',D.tl.map(t=>`<li class="ev rv"><div><b class="num">${t[0]}</b><h3 class="ph">${t[1]}</h3></div></li>`).join(''));
+/* network */
+H('flow',D.flow.map((f,i)=>`<button class="node" data-i="${i}"><span>${f[1]}</span>${f[0]}</button>`).join('<i class="ar"></i>'));
+const fs=b=>{$$('.node').forEach(n=>n.classList.toggle('act',n==b));const f=D.flow[b.dataset.i];$('#fd').innerHTML=`<b>${f[0]}</b>${f[2]}`};
+['mouseover','focusin','click'].forEach(t=>$('#flow').addEventListener(t,e=>{const b=e.target.closest('.node');if(b)fs(b)}));fs($('.node'));
+/* orbit */
+H('orbit','<div class="core">IEEE CS<br>MBITS</div>'+D.tech.map((t,i)=>{const a=i/8*6.2832-1.5708;return`<button class="ob" style="left:${50+41*Math.cos(a)}%;top:${50+41*Math.sin(a)}%" data-i="${i}" aria-label="${t[0]}"><span>${t[1]}</span><small>${t[0]}</small></button>`}).join(''));
+const ts=b=>{$$('.ob').forEach(n=>n.classList.toggle('act',n==b));const t=D.tech[b.dataset.i];$('#tp').innerHTML=`<span style="font-size:2rem">${t[1]}</span><h3>${t[0]}</h3><p>${t[2]}</p><p><em>Activities:</em> ${t[3]}</p><p><em>Projects/events:</em> ${t[4]}</p>`};
+['mouseover','focusin','click'].forEach(t=>$('#orbit').addEventListener(t,e=>{const b=e.target.closest('.ob');if(b)ts(b)}));ts($('.ob'));
+/* events */
+const cats=['All',...new Set(D.ev.map(e=>e[2]))];
+H('evf',cats.map(c=>`<button class="chip${c=='All'?' act':''}" data-c="${c}" aria-pressed="${c=='All'}">${c}</button>`).join(''));
+function evr(c){H('evl',D.ev.map((e,i)=>({e,i})).filter(o=>c=='All'||o.e[2]==c).map(o=>`<li class="ev"><b class="num">0${o.i+1}</b><div><span class="pill">${o.e[2]}</span><h3>${o.e[1]}</h3><p>${o.e[3]}</p><small>${o.e[0]}</small><button class="lnk" aria-expanded="false">View Details →</button><p class="dt card" hidden>Venue and registration link will be posted here closer to the date.</p></div></li>`).join(''))}
+evr('All');
+$('#evf').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;$$('.chip',$('#evf')).forEach(x=>{x.classList.toggle('act',x==b);x.setAttribute('aria-pressed',x==b)});evr(b.dataset.c)};
+$('#evl').onclick=e=>{const b=e.target.closest('.lnk');if(!b)return;const d=b.nextElementSibling,o=d.hidden;d.hidden=!o;b.setAttribute('aria-expanded',o);b.textContent=o?'Hide Details ↑':'View Details →'};
+/* projects */
+H('pj',D.pj.map((p,i)=>`<article class="pc card tilt"><b>0${i+1}</b><h3>${p[0]}</h3><p>${p[2]}</p><div class="tg">${p[1].map(t=>`<i>${t}</i>`).join('')}</div><a class="btn" href="#projects">View Project <span>→</span></a></article>`).join(''));
+/* team */
+H('tm',D.team.map(m=>`<article class="tc card"><div class="av" aria-hidden="true">${m[0].split(' ').map(w=>w[0]).join('')}</div><div class="tb"><h3>${m[0]}</h3><span>${m[1]}</span><p>${m[2]}</p><div class="soc"><a href="#team" aria-label="LinkedIn">in</a><a href="#team" aria-label="Instagram">ig</a></div></div></article>`).join(''));
+/* gallery */
+const gc=['All','Events','Workshops','Community','Projects'];H('gf',gc.map(c=>`<button class="chip${c=='All'?' act':''}" data-c="${c}" aria-pressed="${c=='All'}">${c}</button>`).join(''));
+const gi=(g,src)=>src?`<img src="${src}" alt="${g[0]} photo" loading="lazy">`:`<div class="pf" style="height:${g[1]}px;background:linear-gradient(135deg,hsl(${g[2]} 70% 22%),hsl(${(g[2]+60)%360} 60% 12%))">Photo coming soon</div>`;
+function gr(c){H('gl',D.gal.map((g,i)=>({g,i})).filter(o=>c=='All'||o.g[0]==c).map(o=>`<button class="gi" data-i="${o.i}" aria-label="Open ${o.g[0]} image ${o.i+1}">${gi(o.g,o.g[3])}<cite>${o.g[0]}</cite></button>`).join(''))}gr('All');
+$('#gf').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;$$('.chip',$('#gf')).forEach(x=>{x.classList.toggle('act',x==b);x.setAttribute('aria-pressed',x==b)});gr(b.dataset.c)};
+let lf;const lb=$('#lb'),cl=()=>{lb.classList.remove('open');lf&&lf.focus()};
+$('#gl').onclick=e=>{const b=e.target.closest('.gi');if(!b)return;lf=b;const g=D.gal[b.dataset.i];$('#lbi').innerHTML=gi(g,g[3]).replace(/height:\d+px/,'height:min(60vh,520px)');$('#lbc').textContent=g[0]+' at IEEE CS MBITS';lb.classList.add('open');$('#lx').focus()};
+$('#lx').onclick=cl;lb.onclick=e=>{if(e.target==lb)cl()};addEventListener('keydown',e=>{if(e.key=='Escape'&&lb.classList.contains('open'))cl()});
+/* why */
+$('#wy').insertAdjacentHTML('afterbegin',D.why.map(w=>`<div class="card tilt"><h3 class="g">${w[0]}</h3><p>${w[1]}</p></div>`).join(''));
+/* terminal */
+const to=$('#tout'),sl=ms=>new Promise(r=>setTimeout(r,RM?0:ms));let busy=false;
+async function ty(t,sp=22){for(const ch of t){to.textContent+=ch;await sl(sp)}to.textContent+='\n'}
+H('cmds',Object.keys(D.cmd).map(c=>`<button disabled>${c}</button>`).join(''));
+async function boot(){for(const l of['> Initializing imagination...','> Loading ideas...','> Connecting creators...','> System ready.'])await ty(l,18),await sl(180);$$('#cmds button').forEach(b=>b.disabled=false)}
+$('#cmds').onclick=async e=>{const b=e.target.closest('button');if(!b||busy)return;busy=true;$$('#cmds button').forEach(x=>x.disabled=true);to.textContent+=`\n$ ${b.textContent}\n`;await ty(D.cmd[b.textContent],14);$$('#cmds button').forEach(x=>x.disabled=false);busy=false};
+/* reveal, counters, active section */
+function cnt(e){const raw=e.dataset.n,n=+raw,s=e.dataset.s||'',f=v=>String(Math.round(v)).padStart(2,'0')+s;if(isNaN(n)||!n||RM){e.textContent=isNaN(n)?raw:f(n);return}let t0;const st=t=>{t0=t0||t;const p=Math.min((t-t0)/1400,1);e.textContent=f(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;io.unobserve(t);t.classList.add('in');if(t.dataset.n!==undefined)cnt(t);if(t.id=='terminal')boot()}),{threshold:.2});
+$$('.rv,[data-n],#terminal').forEach(e=>io.observe(e));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('.links a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+SECS.forEach(s=>so.observe($('#'+s[0])));
+/* tilt + magnetic (fine pointers only) */
+if(!RM&&matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{const t=e.target.closest&&e.target.closest('.tilt');if(t){const r=t.getBoundingClientRect();t.style.transform=`perspective(700px) rotateY(${((e.clientX-r.left)/r.width-.5)*8}deg) rotateX(${-((e.clientY-r.top)/r.height-.5)*8}deg)`}});
+document.addEventListener('mouseout',e=>{const t=e.target.closest&&e.target.closest('.tilt');if(t)t.style.transform=''});
+$$('.mag').forEach(m=>{m.addEventListener('mousemove',e=>{const r=m.getBoundingClientRect();m.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`});m.addEventListener('mouseleave',()=>m.style.transform='')})}
+/* form */
+$('#cf').addEventListener('submit',e=>{e.preventDefault();let ok=true;$$('#cf input,#cf textarea').forEach(f=>{const bad=!f.value.trim()||(f.type=='email'&&!/^\S+@\S+\.\S+$/.test(f.value));f.setAttribute('aria-invalid',bad);f.nextElementSibling.textContent=bad?'Enter a valid '+f.name+'.':'';if(bad)ok=false});$('#ok').hidden=!ok;if(ok)e.target.reset()});
+/* hero sphere */
+(()=>{const c=$('#cv'),x=c.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),L=['AI','Web','Cyber','Cloud','Robotics','Data','Innovation'],P=[];let W,Hh,a=0,my=0,vis=true;
+for(let i=0;i<70;i++){const y=1-2*(i+.5)/70,r=Math.sqrt(1-y*y),t=i*2.39996;P.push({x:Math.cos(t)*r,y,z:Math.sin(t)*r,l:i%10==0?L[i/10]:0})}
+const rs=()=>{const b=c.getBoundingClientRect();W=b.width;Hh=b.height;c.width=W*dpr;c.height=Hh*dpr;x.setTransform(dpr,0,0,dpr,0,0);if(RM)fr()};
+function fr(){x.clearRect(0,0,W,Hh);const R=Math.min(W,Hh)*.38,ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(.35+my),sb=Math.sin(.35+my);
+const q=P.map(p=>{const X=p.x*ca+p.z*sa;let Z=-p.x*sa+p.z*ca;const Y=p.y*cb-Z*sb;Z=p.y*sb+Z*cb;return{X:W/2+X*R,Y:Hh/2+Y*R,Z,l:p.l}}),D2=R*.45;
+for(let i=0;i<q.length;i++)for(let j=i+1;j<q.length;j++){const d=Math.hypot(q[i].X-q[j].X,q[i].Y-q[j].Y);if(d<D2){x.strokeStyle=`rgba(99,180,255,${(1-d/D2)*.4*(q[i].Z+q[j].Z+2)/4+.03})`;x.beginPath();x.moveTo(q[i].X,q[i].Y);x.lineTo(q[j].X,q[j].Y);x.stroke()}}
+q.forEach(p=>{const s=(p.Z+1.5)/2.5;x.fillStyle=p.l?`rgba(34,211,238,${.5+s*.5})`:`rgba(165,180,255,${.3+s*.5})`;x.beginPath();x.arc(p.X,p.Y,p.l?4+2*s:1.5+s,0,7);x.fill();if(p.l){x.font='600 12px system-ui,sans-serif';x.fillStyle=`rgba(232,237,255,${.45+s*.55})`;x.fillText(p.l,p.X+9,p.Y+4)}});
+a+=.004;if(!RM&&vis)requestAnimationFrame(fr)}
+new IntersectionObserver(e=>{const v=e[0].isIntersecting;if(v&&!vis&&!RM){vis=true;fr()}vis=v}).observe(c);
+addEventListener('resize',rs);$('#home').addEventListener('mousemove',e=>my=(e.clientY/innerHeight-.5)*.4);rs();if(!RM)fr()})();
+</script></body></html>
