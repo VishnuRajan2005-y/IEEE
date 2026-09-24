@@ -134,7 +134,7 @@ footer{border-top:1px solid var(--ln);padding:60px 6vw 40px;text-align:center;co
 #pkd input{width:100%;border:0;border-bottom:1px solid var(--ln);background:none;color:var(--tx);padding:16px 18px;font:1rem inherit}
 #pkr{max-height:50vh;overflow:auto;padding:8px}
 #pkr button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--tx);padding:10px 14px;border-radius:10px;font:inherit;cursor:pointer}
-#pkr button:hover,#pkr button.hi{background:rgba(34,211,238,.12);color:var(--c1)}
+#pkr button:hover,#pkr button.hi{background:rgba(34,211,238,.12);color:var(--c1)}#err{color:#fca5a5;border:1px solid #f87171;border-radius:10px;padding:12px}
 </style></head><body>
 <div id="pl"><b>IEEE<span>CS</span> MBITS</b><div id="plb"><i></i></div><small>ENGINEERING TOMORROW</small></div>
 <div id="pg"></div><div class="cd"></div><div class="cr"></div>
@@ -186,7 +186,7 @@ footer{border-top:1px solid var(--ln);padding:60px 6vw 40px;text-align:center;co
 
 <section id="contact"><span class="k">Contact</span><h2>Say <span class="g">hello.</span></h2>
 <div class="ct"><address><b>IEEE Computer Society MBITS</b>Email: <a href="mailto:ieeecs.mbits@gmail.com">ieeecs.mbits@gmail.com</a><br>Instagram: <a href="#contact">@ieeecs_mbits</a><br>LinkedIn: <a href="#contact">IEEE Computer Society MBITS</a><br>Location: MBITS, Kerala<p style="margin-top:14px;color:var(--c1);font:.72rem ui-monospace,monospace">Sample contact details — swap in the chapter's real handles before publishing.</p></address>
-<form id="cf" class="card" novalidate><label>Name<input name="name" autocomplete="name"><em class="er"></em></label><label>Email<input name="email" type="email" autocomplete="email"><em class="er"></em></label><label>Message<textarea name="message" rows="4"></textarea><em class="er"></em></label><button class="btn p" type="submit">Send Message</button><p id="ok" hidden role="status">Message sent (demo). Connect a backend to deliver it.</p></form></div></section>
+<form id="cf" class="card" novalidate action="https://formspree.io/f/xljdlrdk" method="POST"><label>Name<input name="name" autocomplete="name"><em class="er"></em></label><label>Email<input name="email" type="email" autocomplete="email"><em class="er"></em></label><label>Message<textarea name="message" rows="4"></textarea><em class="er"></em></label><input type="hidden" name="_gotcha" tabindex="-1" autocomplete="off"><button class="btn p" type="submit">Send Message</button><p id="ok" hidden role="status">Thanks — your message has been sent.</p><p id="err" hidden role="alert">Something went wrong sending that. Try again, or email us directly.</p></form></div></section>
 </main>
 <footer><b>IEEE Computer Society MBITS</b>Engineering Tomorrow.<nav id="fl" aria-label="Footer"></nav><p>Social: @ieeecs_mbits · IEEE Computer Society MBITS on LinkedIn</p><small>© <span id="yr"></span> IEEE Computer Society MBITS. Student-built demo for WebNova — content is sample, not official.</small></footer>
 <div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button class="btn" id="lx">Close ✕</button><div class="bx"><div id="lbi"></div><p id="lbc"></p></div></div>
@@ -282,7 +282,13 @@ if(!RM&&matchMedia('(pointer:fine)').matches){document.addEventListener('mousemo
 document.addEventListener('mouseout',e=>{const t=e.target.closest&&e.target.closest('.tilt');if(t)t.style.transform=''});
 $$('.mag').forEach(m=>{m.addEventListener('mousemove',e=>{const r=m.getBoundingClientRect();m.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`});m.addEventListener('mouseleave',()=>m.style.transform='')})}
 /* form */
-$('#cf').addEventListener('submit',e=>{e.preventDefault();let ok=true;$$('#cf input,#cf textarea').forEach(f=>{const bad=!f.value.trim()||(f.type=='email'&&!/^\S+@\S+\.\S+$/.test(f.value));f.setAttribute('aria-invalid',bad);f.nextElementSibling.textContent=bad?'Enter a valid '+f.name+'.':'';if(bad)ok=false});$('#ok').hidden=!ok;if(ok)e.target.reset()});
+$('#cf').addEventListener('submit',async e=>{e.preventDefault();const form=e.target;let ok=true;$$('#cf input:not([type=hidden]),#cf textarea').forEach(f=>{const bad=!f.value.trim()||(f.type=='email'&&!/^\S+@\S+\.\S+$/.test(f.value));f.setAttribute('aria-invalid',bad);f.nextElementSibling.textContent=bad?'Enter a valid '+f.name+'.':'';if(bad)ok=false});
+$('#ok').hidden=true;$('#err').hidden=true;if(!ok)return;
+const btn=form.querySelector('button[type=submit]');btn.disabled=true;const old=btn.textContent;btn.textContent='Sending…';
+try{const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+if(res.ok){$('#ok').hidden=false;form.reset()}else{$('#err').hidden=false}}
+catch(_){$('#err').hidden=false}
+finally{btn.disabled=false;btn.textContent=old}});
 /* hero sphere */
 (()=>{const c=$('#cv'),x=c.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),L=['AI','Web','Cyber','Cloud','Robotics','Data','Innovation'],P=[];let W,Hh,a=0,my=0,vis=true;
 for(let i=0;i<70;i++){const y=1-2*(i+.5)/70,r=Math.sqrt(1-y*y),t=i*2.39996;P.push({x:Math.cos(t)*r,y,z:Math.sin(t)*r,l:i%10==0?L[i/10]:0})}
